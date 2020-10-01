@@ -127,16 +127,21 @@ public class CommentsActivity extends AppCompatActivity {
 
     private void readComments(){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Comments").child( postid );
+        Log.i("postid",postid);
         reference.addValueEventListener( new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 commentList.clear();
+                //Log.i("commentsAdapter",  commentAdapter.toString() );
                 for(DataSnapshot snapshot1:snapshot.getChildren()){
                     Comment comment = snapshot1.getValue(Comment.class);
-                    Log.i("comments", String.valueOf( comment ) );
+                    //Log.i("comments",  commentList.toString() );
                     commentList.add( comment );
                 }
                 commentAdapter.notifyDataSetChanged();
+
+                //Log.i("comments",  commentList.toString() );
+               // Log.i("commentsAdapter",  commentAdapter.toString() );
             }
 
             @Override

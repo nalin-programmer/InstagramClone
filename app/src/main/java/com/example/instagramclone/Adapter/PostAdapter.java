@@ -64,6 +64,7 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
         publisherInfo( holder.image_profile,holder.username,holder.publisher,post.getPublisher() );
         isLiked( post.getPostid(),holder.like );
         nrLikes( holder.likes, post.getPostid());
+        getComments( post.getPostid(),holder.comments );
 
         holder.like.setOnClickListener( new View.OnClickListener() {
             @Override

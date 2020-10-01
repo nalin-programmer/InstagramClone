@@ -104,6 +104,7 @@ public class CommonAdapter extends RecyclerView.Adapter<CommonAdapter.ViewHolder
                 User user = snapshot.getValue( User.class );
                 Glide.with( mContext ).load( user.getImageurl() ).into( imageView );
                 username.setText( user.getUsername() );
+//                username.setText( "user.getUsername()" );
             }
 
             @Override

@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -85,16 +86,19 @@ public class HomeFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 postLists.clear();
+                //Log.i( "HF",postAdapter.toString() );
                 for(DataSnapshot snapshot1: snapshot.getChildren()){
                     Post post = snapshot1.getValue( Post.class );
                     for(String id : followingList){
                         if(post.getPublisher().equals( id )){
                             postLists.add( post );
+                           // Log.i( "HFF",postLists.toString() );
                         }
                     }
                 }
 
                 postAdapter.notifyDataSetChanged();
+               // Log.i( "HF",postAdapter.toString() );
             }
 
             @Override
