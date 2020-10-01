@@ -1,6 +1,7 @@
 package com.example.instagramclone.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.instagramclone.CommentsActivity;
 import com.example.instagramclone.Model.Post;
 import com.example.instagramclone.Model.User;
 import com.example.instagramclone.R;
@@ -45,9 +47,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
 
     @NonNull
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        Post post = mPost.get( position );
+        final Post post = mPost.get( position );
 
         Glide.with( mComtext ).load( post.getPostimage() ).into( holder.post_image);
 
@@ -56,10 +58,45 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
         }else{
             holder.description.setVisibility( View.VISIBLE );
             holder.description.setText( post.getDescription() );
+            getComments( post.getPostid(),holder.comments );
         }
 
         publisherInfo( holder.image_profile,holder.username,holder.publisher,post.getPublisher() );
+        isLiked( post.getPostid(),holder.like );
+        nrLikes( holder.likes, post.getPostid());
 
+        holder.like.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(holder.like.getTag().equals( "like" )){
+                    FirebaseDatabase.getInstance().getReference().child( "Likes" ).child( post.getPostid() )
+                            .child( firebaseUser.getUid() ).setValue( true );
+                }else {
+                    FirebaseDatabase.getInstance().getReference().child( "Likes" ).child( post.getPostid() )
+                            .child( firebaseUser.getUid() ).removeValue();
+                }
+            }
+        } );
+
+        holder.comment.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( mComtext, CommentsActivity.class );
+                intent.putExtra( "postid",post.getPostid() );
+                intent.putExtra( "publisherid",post.getPublisher() );
+                mComtext.startActivity( intent );
+            }
+        } );
+
+        holder.comments.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( mComtext, CommentsActivity.class );
+                intent.putExtra( "postid",post.getPostid() );
+                intent.putExtra( "publisherid",post.getPublisher() );
+                mComtext.startActivity( intent );
+            }
+        } );
     }
     @Override
     public int getItemCount() {
@@ -89,13 +126,71 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
 
     }
 
-    private  void publisherInfo(final ImageView image_profile, TextView username, final TextView publisher, String userid){
+    private void getComments(String postid, final TextView comments){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child( "Comments" ).child( postid );
+
+        reference.addValueEventListener( new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                comments.setText( "View All "+ snapshot.getChildrenCount() + " Comments" );
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        } );
+    }
+
+    private void isLiked(String postid, final ImageView imageView){
+        final FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference()
+                .child( "Likes" )
+                .child( postid );
+        reference.addValueEventListener( new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.child( firebaseUser.getUid() ).exists()){
+                    imageView.setImageResource( R.drawable.ic_liked );
+                    imageView.setTag( "liked" );
+                }else{
+                    imageView.setImageResource( R.drawable.ic_like );
+                    imageView.setTag( "like" );
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        } );
+    }
+
+    private void nrLikes(final TextView likes, String postid){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child( "Likes" )
+                .child( postid );
+        reference.addValueEventListener( new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                likes.setText( snapshot.getChildrenCount() + " likes" );
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        } );
+    }
+
+    private  void publisherInfo(final ImageView image_profile, final TextView username, final TextView publisher, String userid){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child( userid );
         reference.addValueEventListener( new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User user = snapshot.getValue( User.class );
                 Glide.with( mComtext ).load( user.getImageurl() ).into( image_profile );
+                username.setText( user.getUsername() );
                 publisher.setText( user.getUsername() );
             }
 

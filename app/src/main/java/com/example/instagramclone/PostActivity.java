@@ -10,6 +10,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.EditText;
@@ -82,7 +83,7 @@ public class PostActivity extends AppCompatActivity {
 
     private void uploadImage(){
         final ProgressDialog progressDialog = new ProgressDialog( this );
-        progressDialog.setMessage( "postiong" );
+        progressDialog.setMessage( "posting" );
         progressDialog.show();
 
         if(imageUri!= null){
@@ -108,8 +109,8 @@ public class PostActivity extends AppCompatActivity {
 
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Posts");
 
-                        String postid = reference.push().getKey();;
-
+                        String postid = reference.push().getKey();
+                        //Log.i("username",postid);
                         HashMap<String, Object> hashMap = new HashMap<>();
                         hashMap.put( "postid",postid );
                         hashMap.put( "postimage",myUrl);
