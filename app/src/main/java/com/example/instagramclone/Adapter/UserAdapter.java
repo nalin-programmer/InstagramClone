@@ -2,6 +2,7 @@ package com.example.instagramclone.Adapter;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,9 +66,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
                 SharedPreferences.Editor editor = mContext.getSharedPreferences( "PREFS",Context.MODE_PRIVATE ).edit();
                 editor.putString( "profield",user.getId() );
                 editor.apply();
+                //Log.i("ProfileIdUA",user.getId());
 
                 ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace( R.id.fragment_container,
-                        new ProfileFragment() ).commit();
+                        new ProfileFragment()).commit();
             }
         } );
 

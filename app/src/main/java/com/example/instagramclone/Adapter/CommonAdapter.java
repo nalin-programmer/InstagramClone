@@ -95,6 +95,24 @@ public class CommonAdapter extends RecyclerView.Adapter<CommonAdapter.ViewHolder
         }
     }
 
+    private void getUserInfo(final ImageView imageView, final TextView username, String publisherid){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child( "Users" ).child( publisherid );
+
+        reference.addValueEventListener( new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User user = snapshot.getValue( User.class );
+                Glide.with( mContext ).load( user.getImageurl() ).into( imageView );
+                username.setText( user.getUsername() );
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        } );
+    }
+
     private void getUserId(final ImageView imageView, final TextView username, String publisherid){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child( "Users" ).child( publisherid );
 

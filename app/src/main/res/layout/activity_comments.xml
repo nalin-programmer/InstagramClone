@@ -17,7 +17,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/recycle_view"
         android:layout_below="@+id/toolbar"
-        android:layout_above="@+id/bottom"/>
+        android:layout_above="@+id/bottom">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <RelativeLayout
         android:layout_width="match_parent"
