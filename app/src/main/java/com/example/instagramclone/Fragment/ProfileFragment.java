@@ -23,6 +23,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.instagramclone.Adapter.MyFotoAdapter;
 import com.example.instagramclone.EditProfileActivity;
+import com.example.instagramclone.FollowersActivity;
 import com.example.instagramclone.Model.Post;
 import com.example.instagramclone.Model.User;
 import com.example.instagramclone.R;
@@ -151,6 +152,27 @@ public class ProfileFragment extends Fragment {
             public void onClick(View v) {
                 recyclerView.setVisibility( View.GONE );
                 recyclerView_saves.setVisibility( View.VISIBLE );
+            }
+        } );
+
+        followers.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getContext(), FollowersActivity.class );
+                intent.putExtra( "id",profileid );
+                intent.putExtra( "title","followers" );
+                Log.i("followers","followers");
+                startActivity( intent );
+            }
+        } );
+
+        following.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getContext(), FollowersActivity.class );
+                intent.putExtra( "id",profileid );
+                intent.putExtra( "title","following" );
+                startActivity( intent );
             }
         } );
 
