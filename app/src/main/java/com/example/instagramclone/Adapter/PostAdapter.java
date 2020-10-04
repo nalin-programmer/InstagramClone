@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.instagramclone.CommentsActivity;
 import com.example.instagramclone.FollowersActivity;
 import com.example.instagramclone.Fragment.PostDetailFragment;
@@ -57,7 +58,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder>{
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         final Post post = mPost.get( position );
 
-        Glide.with( mComtext ).load( post.getPostimage() ).into( holder.post_image);
+        Glide.with( mComtext ).load( post.getPostimage() )
+                .apply( new RequestOptions().placeholder( R.drawable.placeholder ) )
+                .into( holder.post_image);
 
         if(post.getDescription().equals( "" )){
             holder.description.setVisibility( View.GONE );

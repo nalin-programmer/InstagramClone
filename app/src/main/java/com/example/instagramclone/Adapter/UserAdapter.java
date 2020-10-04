@@ -70,7 +70,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
             public void onClick(View v) {
                 if (isfragment) {
                     SharedPreferences.Editor editor = mContext.getSharedPreferences( "PREFS", Context.MODE_PRIVATE ).edit();
-                    editor.putString( "profield", user.getId() );
+                    editor.putString( "profileid", user.getId() );
                     editor.apply();
                     //Log.i("ProfileIdUA",user.getId());
 

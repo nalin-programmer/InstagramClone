@@ -26,6 +26,7 @@ import com.example.instagramclone.EditProfileActivity;
 import com.example.instagramclone.FollowersActivity;
 import com.example.instagramclone.Model.Post;
 import com.example.instagramclone.Model.User;
+import com.example.instagramclone.OptionsActivity;
 import com.example.instagramclone.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -69,8 +70,9 @@ public class ProfileFragment extends Fragment {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         //Log.i( "check","123321" );
         SharedPreferences prefs = getContext().getSharedPreferences( "PREFS", Context.MODE_PRIVATE );
-        profileid = prefs.getString( "profield", firebaseUser.getUid()  );
-
+        // here here
+        profileid = prefs.getString( "profileid",  firebaseUser.getUid() );
+        //firebaseUser.getUid()
         image_Profile = view.findViewById( R.id.image_profile );
         options = view.findViewById( R.id.options );
         posts = view.findViewById( R.id.posts );
@@ -136,6 +138,14 @@ public class ProfileFragment extends Fragment {
                     FirebaseDatabase.getInstance().getReference().child( "Follow" ).child( profileid )
                             .child( "followers" ).child( firebaseUser.getUid() ).removeValue();
                 }
+            }
+        } );
+
+        options.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent( getContext(), OptionsActivity.class );
+                startActivity( intent );
             }
         } );
 

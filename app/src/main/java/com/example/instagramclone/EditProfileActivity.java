@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.instagramclone.Fragment.ProfileFragment;
 import com.example.instagramclone.Model.User;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -116,6 +117,11 @@ public class EditProfileActivity extends AppCompatActivity {
                 updateProfile(fullname.getText().toString(),
                         username.getText().toString(),
                         bio.getText().toString());
+                // new code
+                Intent intent = new Intent( EditProfileActivity.this, ProfileFragment.class );
+                startActivity( intent );
+                // new code
+
             }
         } );
 
