@@ -139,11 +139,12 @@ public class HomeFragment extends Fragment {
                 storyList.clear();
                 storyList.add( new Story("",0,0,"",
                         FirebaseAuth.getInstance().getCurrentUser().getUid()) );
+                Log.i( "followinglist", String.valueOf( followingList.size() ) );
                 for(String id : followingList){
                     int countStory = 0;
                     Story story = null;
                     for (DataSnapshot snapshot1 : snapshot.child( id ).getChildren()){
-                        story = snapshot.getValue( Story.class );
+                        story = snapshot1.getValue( Story.class );
                         if(timecurrent > story.getTimestart() && timecurrent < story.getTimeend()){
                             countStory++;
                         }

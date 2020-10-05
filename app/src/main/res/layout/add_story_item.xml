@@ -37,6 +37,6 @@
         android:id="@+id/addstory_text"
         android:textColor="@color/colorPrimaryDark"
         android:layout_gravity="center"
-        android:maxLines="1 "/>
+        android:maxLines="1"/>
 
 </LinearLayout>

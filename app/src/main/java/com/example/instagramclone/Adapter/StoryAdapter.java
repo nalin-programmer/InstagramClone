@@ -1,6 +1,9 @@
 package com.example.instagramclone.Adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +14,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.instagramclone.AddStoryActivity;
 import com.example.instagramclone.Model.Story;
 import com.example.instagramclone.Model.User;
 import com.example.instagramclone.R;
+import com.example.instagramclone.StartActivity;
+import com.example.instagramclone.StoryActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -48,7 +54,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
 
-        Story story = mStory.get( position );
+        final Story story = mStory.get( position );
 
         userInfo( holder, story.getUserid(),position );
 
@@ -66,7 +72,9 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder>{
                 if(holder.getAdapterPosition() == 0){
                     myStory( holder.addstory_text, holder.story_plus, true );
                 }else{
-                    //TODO: go to story
+                    Intent intent = new Intent( mContext, StoryActivity.class );
+                    intent.putExtra( "userid", story.getUserid() );
+                    mContext.startActivity( intent );
                 }
             }
         } );
@@ -137,7 +145,32 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder>{
                     }
                 }
                 if(click){
-                    // TODO: show alert dialog
+                    if(count>0) {
+                        AlertDialog alertDialog = new AlertDialog.Builder( mContext ).create();
+                        alertDialog.setButton( AlertDialog.BUTTON_NEGATIVE, "View story",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent intent = new Intent( mContext, StoryActivity.class );
+                                        intent.putExtra( "userid", FirebaseAuth.getInstance().getCurrentUser().getUid() );
+                                        mContext.startActivity( intent );
+                                        dialog.dismiss();
+                                    }
+                                } );
+                        alertDialog.setButton( AlertDialog.BUTTON_POSITIVE, "Add story",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        Intent intent = new Intent( mContext, AddStoryActivity.class );
+                                        mContext.startActivity( intent );
+                                        dialog.dismiss();
+                                    }
+                                } );
+                        alertDialog.show();
+                    }else{
+                        Intent intent = new Intent( mContext, AddStoryActivity.class );
+                        mContext.startActivity( intent );
+                    }
                 }else{
                     if(count>0) {
                         textView.setText( "My Story" );
@@ -159,7 +192,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder>{
     private void seenStory(final ViewHolder viewHolder, String userid){
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Story")
                 .child( userid );
-        reference.addListenerForSingleValueEvent( new ValueEventListener() {
+        reference.addValueEventListener( new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 int i=0;
