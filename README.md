@@ -42,9 +42,7 @@
     
   <li>Searching Friends<br>
   <p aling = "center"><i>Including feature to follow and un-follow them</i></p>
-  <p aling = "center">
-    <kbd>
+  <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/SearchFriends.jpg" height="400" width="200"/>
-  </kbd>
-  </p><br>
+     </kbd></p><br>
 </ul>
