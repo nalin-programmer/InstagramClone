@@ -61,7 +61,7 @@
      </kbd></p><br>
   
   <li>Profile<br>
-  <p align="center"><i>You can see your profile, edit  profile, edit or delete or report your own posts</i></p><br>
+  <p align="center"><i>You can see your profile, edit  profile, edit or delete or report your own posts</i></p>
   <p align="center"><i>see followers, and following and your bookmarked posts and has a logout option also</i></p><br>
   <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/Profile.jpg" height="400" width="200"/>
