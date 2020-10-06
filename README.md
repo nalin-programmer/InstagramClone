@@ -1,5 +1,5 @@
 # InstagramClone
-<i>This is an Android Project what in Language Java using Android Studio and FireBase.It is fillef with all the features of a famous app called Instagram.</i>
+<i>This is an Android Project what in Language Java using Android Studio and Firebase. It is filled with all the features of a famous app called Instagram.</i>
 <br><br>
 <h2>Its design speciality include</h2>
 <ul>
