@@ -4,6 +4,7 @@
 <h2>Its design speciality include</h2>
 <ul>
 <li>Start Page include Login/Register Feature<br>
+  <p align="center">
   <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/StartingPage.jpg" height="400" width="200"/>
   </kbd>
@@ -13,11 +14,11 @@
   <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/RegisterPage.jpg" height="400" width="200"/>
   </kbd>
-  
+  </p>
   <li>After Login/Register main page opens containing posts.<br>
   <i>It has features like Like,Bookmark,comment,delete comments and even Report Post</i><br>
    <p align="center"> <kbd>
-    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/MainPage.jpg" height="400" width="200"/>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/MainPageUnlike.jpg" height="400" width="200"/>
      </kbd></p><br>
   <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/CommentsOnPost.jpg" height="400" width="200"/>
@@ -29,6 +30,9 @@
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ViewLikesOnPost.jpg" height="400" width="200"/>
   </kbd>
   <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/MainPage.jpg" height="400" width="200"/>
+  </kbd>
+    <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ReportPosts.jpg" height="400" width="200"/>
   </kbd>
 
