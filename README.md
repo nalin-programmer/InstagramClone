@@ -20,6 +20,7 @@
    <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/MainPageUnlike.jpg" height="400" width="200"/>
      </kbd></p><br>
+    <p align="center">
   <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/CommentsOnPost.jpg" height="400" width="200"/>
   </kbd>
@@ -29,11 +30,14 @@
   <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ViewLikesOnPost.jpg" height="400" width="200"/>
   </kbd>
+      </p><br>
+    <p align="center">
   <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/MainPage.jpg" height="400" width="200"/>
   </kbd>
     <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ReportPosts.jpg" height="400" width="200"/>
   </kbd>
+      </p><br>
 
 </ul>
