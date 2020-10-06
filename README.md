@@ -12,11 +12,11 @@
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/RegisterPage.jpg" height="400" width="200"/>
   </kbd>
   <kbd>
-    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/RegisterPage.jpg" height="400" width="200"/>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/LoginPage.jpg" height="400" width="200"/>
   </kbd>
   </p>
   <li>After Login/Register main page opens containing posts.<br>
-  <i>It has features like Like,Bookmark,comment,delete comments and even Report Post</i><br>
+  <p align="center"><i>It has features like Like,Bookmark,comment,delete comments and even Report Post</i></p><br>
    <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/MainPageUnlike.jpg" height="400" width="200"/>
      </kbd></p><br>
