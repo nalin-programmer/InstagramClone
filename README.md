@@ -41,8 +41,14 @@
       </p><br>
     
   <li>Searching Friends<br>
-  <p aling = "center"><i>Including feature to follow and un-follow them</i></p>
+  <p aling = "center"><i>Including feature to search, follow and un-follow them</i></p>
   <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/SearchFriends.jpg" height="400" width="200"/>
+     </kbd></p><br>
+  
+  <li>Create Posts<br>
+  <p aling = "center"><i>Add posts and descriptions to it</i></p>
+  <p align="center"> <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/CreatePost.jpg" height="400" width="200"/>
      </kbd></p><br>
 </ul>
