@@ -84,6 +84,19 @@
   <li>Edit Your Post<br>
   <p align="center"><i>You can even edit your own post</i></p><br>
   <p align="center"> <kbd>
-    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/NotificationPage.jpg" height="400" width="200"/>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/EditPost.jpg" height="400" width="200"/>
      </kbd></p><br>
+  
+  <li>View Profile Of Other Peoplet<br>
+  <p align="center"><i>You can even view profile of other people, their post and follow/unfollow from that page</i></p><br>
+  <p align="center"> <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/OtherPeopleProfile.jpg" height="400" width="200"/>
+     </kbd></p><br>
+  
+  <li>Logout<br>
+  <p align="center"><i>There is an logout page where you can logout from the app</i></p><br>
+  <p align="center"> <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/OtherPeopleProfile.jpg" height="400" width="200"/>
+     </kbd></p><br>
+  
 </ul>
