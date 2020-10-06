@@ -46,5 +46,5 @@
     <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/SearchFriends.jpg" height="400" width="200"/>
   </kbd>
-      </p><br>
+  </p><br>
 </ul>
