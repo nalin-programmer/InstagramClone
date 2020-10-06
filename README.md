@@ -4,5 +4,5 @@
 <h2>Its design speciality include</h2>
 <ul>
 <li>Start Page include Login/Register Feature
-<img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/StartingPage.jpg" height="400" width="200" border="1">
+<img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/StartingPage.jpg" height="400" width="200" border="5">
 </ul>
