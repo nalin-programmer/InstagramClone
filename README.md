@@ -69,6 +69,6 @@
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/EditProfile.jpg" height="400" width="200"/>
      </kbd>
   <kbd>
-    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ProfileEditDeleteReport.jpg" height="400" width="200"/>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/PsotEditDeleteReport.jpg" height="400" width="200"/>
      </kbd></p><br>
 </ul>
