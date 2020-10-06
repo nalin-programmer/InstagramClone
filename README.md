@@ -64,5 +64,11 @@
   <p align="center"><i>see followers, and following and your bookmarked posts and has a logout option also</i></p><br>
   <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/Profile.jpg" height="400" width="200"/>
+     </kbd>
+  <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/EditProfile.jpg" height="400" width="200"/>
+     </kbd>
+  <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ProfileEditDeleteReport.jpg" height="400" width="200"/>
      </kbd></p><br>
 </ul>
