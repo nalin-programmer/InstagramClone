@@ -53,4 +53,10 @@
   <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/CreatePost.jpg" height="400" width="200"/>
      </kbd></p><br>
+  
+  <li>Notifications<br>
+  <p align="center"><i>You even receive notifications what your friends are doing</i></p><br>
+  <p align="center"> <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/NotificationPage.jpg" height="400" width="200"/>
+     </kbd></p><br>
 </ul>
