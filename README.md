@@ -71,4 +71,13 @@
   <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/PostEditDeleteReport.jpg" height="400" width="200"/>
      </kbd></p><br>
+  <p align="center"> <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/Followers.jpg" height="400" width="200"/>
+     </kbd>
+  <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/Following.jpg" height="400" width="200"/>
+     </kbd>
+  <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/BookmarkInProfile.jpg" height="400" width="200"/>
+     </kbd></p><br>
 </ul>
