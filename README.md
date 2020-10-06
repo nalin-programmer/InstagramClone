@@ -16,9 +16,9 @@
   
   <li>After Login/Register main page opens containing posts.<br>
   <i>It has features like Like,Bookmark,comment,delete comments and even Report Post</i><br>
-   <center> <kbd>
+   <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/MainPage.jpg" height="400" width="200"/>
-     </kbd></center><br>
+     </kbd></p><br>
   <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/CommentsOnPost.jpg" height="400" width="200"/>
   </kbd>
@@ -29,7 +29,7 @@
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ViewLikesOnPost.jpg" height="400" width="200"/>
   </kbd>
   <kbd>
-    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ReportPost.jpg" height="400" width="200"/>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ReportPosts.jpg" height="400" width="200"/>
   </kbd>
 
 </ul>
