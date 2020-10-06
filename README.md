@@ -40,8 +40,13 @@
   </kbd>
       </p><br>
     
-  <li>Searching Friends<br>
+   <li>Add status<br>
+  <p align="center"><i>You can add your status, see how many people viewed it and even delete status</i></p><br>
+  <p align="center"> <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/ViewStatus.jpg" height="400" width="200"/>
+     </kbd></p><br>
   
+  <li>Searching Friends<br>
   <p align="center"><i>Including feature to search, follow and un-follow them</i></p><br>
   <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/SearchFriends.jpg" height="400" width="200"/>
@@ -87,7 +92,7 @@
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/EditPost.jpg" height="400" width="200"/>
      </kbd></p><br>
   
-  <li>View Profile Of Other Peoplet<br>
+  <li>View Profile Of Other People<br>
   <p align="center"><i>You can even view profile of other people, their post and follow/unfollow from that page</i></p><br>
   <p align="center"> <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/OtherPeopleProfile.jpg" height="400" width="200"/>
