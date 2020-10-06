@@ -80,4 +80,10 @@
   <kbd>
     <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/BookmarkInProfile.jpg" height="400" width="200"/>
      </kbd></p><br>
+  
+  <li>Edit Your Post<br>
+  <p align="center"><i>You can even edit your own post</i></p><br>
+  <p align="center"> <kbd>
+    <img src = "https://github.com/nalin-programmer/InstagramClone/blob/master/screenshot/NotificationPage.jpg" height="400" width="200"/>
+     </kbd></p><br>
 </ul>
